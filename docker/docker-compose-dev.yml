@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  ws-php:
+    image: private/wholesaler/php-fpm-dev:latest
+    build:
+      dockerfile: docker/php-fpm/Dockerfile
+      context: ../.
+      target: DEV
+    environment:
+      - PHP_IDE_CONFIG=serverName=rs-php
+    volumes:
+      - ../:/var/www/wholesaler:delegated
+      - ./php-fpm/dev.xdebug.ini:/usr/local/etc/php/conf.d/dev.xdebug.ini:delegated

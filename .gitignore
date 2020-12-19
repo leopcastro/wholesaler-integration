@@ -1,0 +1,9 @@
+###> jetbrains/phpstorm ###
+.idea
+###> jetbrains/phpstorm ###
+
+###> squizlabs/php_codesniffer ###
+.phpcs-cache
+###< squizlabs/php_codesniffer ###
+
+/vendor
