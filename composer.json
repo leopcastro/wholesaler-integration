@@ -14,7 +14,7 @@
   "suggest": {
   },
   "scripts": {
-    "tests": "phpunit tests",
+    "tests": "phpunit tests/unit --colors auto",
     "code-style": "phpcs",
     "phpcbf": "phpcbf"
   }

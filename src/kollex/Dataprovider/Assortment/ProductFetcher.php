@@ -6,10 +6,7 @@ namespace kollex\Dataprovider\Assortment;
 
 use kollex\Dataprovider\Assortment\Product\Product;
 
-interface DataProvider
+interface ProductFetcher
 {
-    /**
-     * @return Product[]
-     */
-    public function getProducts(): array;
+    public function getProduct(): ?Product;
 }
