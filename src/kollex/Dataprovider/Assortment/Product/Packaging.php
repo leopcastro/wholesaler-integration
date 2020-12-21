@@ -6,7 +6,11 @@ namespace kollex\Dataprovider\Assortment\Product;
 
 class Packaging
 {
-    private const VALID_TYPES = ['CA', 'BX', 'BO'];
+    public const CASE = 'CA';
+    public const BOX = 'BX';
+    public const BOTTLE = 'BO';
+
+    private const VALID_TYPES = [self::CASE, self::BOX, self::BOTTLE];
 
     private string $type;
 

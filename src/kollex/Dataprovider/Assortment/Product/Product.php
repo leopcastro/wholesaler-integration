@@ -28,15 +28,15 @@ interface Product
 
     public function setBaseProductPackaging(BaseProductPackaging $baseProductPackaging): void;
 
-    public function getBaseProductUnit(): string;
+    public function getBaseProductUnit(): BaseProductUnit;
 
-    public function setBaseProductUnit(string $baseProductUnit): void;
+    public function setBaseProductUnit(BaseProductUnit $baseProductUnit): void;
 
-    public function getBaseProductAmount(): string;
+    public function getBaseProductAmount(): float;
 
-    public function setBaseProductAmount(string $baseProductAmount): void;
+    public function setBaseProductAmount(float $baseProductAmount): void;
 
-    public function getBaseProductQuantity(): string;
+    public function getBaseProductQuantity(): int;
 
-    public function setBaseProductQuantity(string $baseProductQuantity): void;
+    public function setBaseProductQuantity(int $baseProductQuantity): void;
 }

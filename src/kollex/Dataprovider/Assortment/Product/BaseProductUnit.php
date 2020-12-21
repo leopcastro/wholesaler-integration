@@ -6,7 +6,10 @@ namespace kollex\Dataprovider\Assortment\Product;
 
 class BaseProductUnit
 {
-    private const VALID_TYPES = ['LT', 'GR'];
+    public const LITERS = 'LT';
+    public const GRAMS = 'GR';
+
+    private const VALID_TYPES = [self::LITERS, self::GRAMS];
 
     private string $type;
 

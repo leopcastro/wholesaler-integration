@@ -7,14 +7,14 @@ namespace kollex\Dataprovider\Assortment\Product;
 class WholesalerProduct implements Product
 {
     private string $id;
-    private string $gtin;
+    private string $gtin = '';
     private string $manufacturer;
     private string $name;
     private Packaging $packaging;
     private BaseProductPackaging $baseProductPackaging;
-    private string $baseProductUnit;
-    private string $baseProductAmount;
-    private string $baseProductQuantity;
+    private BaseProductUnit $baseProductUnit;
+    private float $baseProductAmount;
+    private int $baseProductQuantity;
 
     public function __construct(
         string $id,
@@ -22,9 +22,9 @@ class WholesalerProduct implements Product
         string $name,
         Packaging $packaging,
         BaseProductPackaging $baseProductPackaging,
-        string $baseProductUnit,
-        string $baseProductAmount,
-        string $baseProductQuantity
+        BaseProductUnit $baseProductUnit,
+        float $baseProductAmount,
+        int $baseProductQuantity
     ) {
         $this->id = $id;
         $this->manufacturer = $manufacturer;
@@ -91,32 +91,32 @@ class WholesalerProduct implements Product
         $this->baseProductPackaging = $baseProductPackaging;
     }
 
-    public function getBaseProductUnit(): string
+    public function getBaseProductUnit(): BaseProductUnit
     {
         return $this->baseProductUnit;
     }
 
-    public function setBaseProductUnit(string $baseProductUnit): void
+    public function setBaseProductUnit(BaseProductUnit $baseProductUnit): void
     {
         $this->baseProductUnit = $baseProductUnit;
     }
 
-    public function getBaseProductAmount(): string
+    public function getBaseProductAmount(): float
     {
         return $this->baseProductAmount;
     }
 
-    public function setBaseProductAmount(string $baseProductAmount): void
+    public function setBaseProductAmount(float $baseProductAmount): void
     {
         $this->baseProductAmount = $baseProductAmount;
     }
 
-    public function getBaseProductQuantity(): string
+    public function getBaseProductQuantity(): int
     {
         return $this->baseProductQuantity;
     }
 
-    public function setBaseProductQuantity(string $baseProductQuantity): void
+    public function setBaseProductQuantity(int $baseProductQuantity): void
     {
         $this->baseProductQuantity = $baseProductQuantity;
     }
