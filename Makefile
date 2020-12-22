@@ -4,7 +4,10 @@ DOCKER-COMPOSE-FILE-DEV="docker/docker-compose-dev.yml"
 ###########
 ### RUN ###
 ###########
-up-build-dev: build-php-fpm-dev composer_install
+initial-setup: build-php-fpm-dev composer_install
+
+print-products:
+	docker-compose -f $(DOCKER-COMPOSE-FILE-DEV) run --rm ws-php php src/entrypoint.php
 
 run:
 	docker-compose -f $(DOCKER-COMPOSE-FILE-DEV) run --rm ws-php sh
