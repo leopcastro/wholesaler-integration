@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "PRODUCT_IDENTIFIER": "12345",
+      "EAN_CODE_GTIN": "67890",
+      "BRAND": "Drinks Corp.",
+      "NAME": "Soda Drink, 12x 1L",
+      "PACKAGE": "case",
+      "ADDITIONAL_INFO": "",
+      "VESSEL": "bottle",
+      "LITERS_PER_BOTTLE": "1",
+      "BOTTLE_AMOUNT": "12"
+    },
+    {
+      "PRODUCT_IDENTIFIER": "23456",
+      "EAN_CODE_GTIN": "78901",
+      "BRAND": "Drinks Corp.",
+      "NAME": "Orange Drink, 20x 0.5L",
+      "PACKAGE": "case",
+      "ADDITIONAL_INFO": "",
+      "VESSEL": "bottle",
+      "LITERS_PER_BOTTLE": "0,5",
+      "BOTTLE_AMOUNT": "20"
+    }
+  ]
+}
