@@ -17,7 +17,7 @@ class WholesalerACsvFetcherTest extends TestCase
      */
     private $wholesalerACsvNormalizer;
 
-    private WholesalerACsvFetcher $csvParser;
+    private WholesalerACsvFetcher $wholesalerACsvFetcher;
 
     /**
      * @var CsvReader|\PHPUnit\Framework\MockObject\MockObject
@@ -29,7 +29,7 @@ class WholesalerACsvFetcherTest extends TestCase
         $this->wholesalerACsvNormalizer = $this->createMock(WholesalerACsvNormalizer::class);
         $this->csvReader = $this->createMock(CsvReader::class);
 
-        $this-> csvParser = new WholesalerACsvFetcher($this->wholesalerACsvNormalizer, $this->csvReader);
+        $this-> wholesalerACsvFetcher = new WholesalerACsvFetcher($this->wholesalerACsvNormalizer, $this->csvReader);
     }
 
     public function testGetProduct()
@@ -58,7 +58,7 @@ class WholesalerACsvFetcherTest extends TestCase
         $this->wholesalerACsvNormalizer->method('getBaseProductAmountValue')->willReturn($baseProductAmount);
         $this->wholesalerACsvNormalizer->method('getBaseProductQuantityValue')->willReturn($baseProductQuantity);
 
-        $product = $this->csvParser->getProduct();
+        $product = $this->wholesalerACsvFetcher->getProduct();
 
         $this->assertInstanceOf(Product::class, $product);
 
@@ -78,7 +78,7 @@ class WholesalerACsvFetcherTest extends TestCase
     {
         $this->csvReader->method('getData')->willReturn(null);
 
-        $product = $this->csvParser->getProduct();
+        $product = $this->wholesalerACsvFetcher->getProduct();
 
         $this->assertEquals(null, $product);
     }

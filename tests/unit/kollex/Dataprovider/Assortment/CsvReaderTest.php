@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 class CsvReaderTest extends TestCase
 {
-    private const CSV_FIXUTRE_PATH = __DIR__ . '/Fixtures/wholesalerASample.csv';
+    private const CSV_FIXUTRE_PATH = __DIR__ . '/Fixtures/wholesaler_a_sample.csv';
 
     private CsvReader $csvReader;
 
