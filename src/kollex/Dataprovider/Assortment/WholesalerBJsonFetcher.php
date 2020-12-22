@@ -39,7 +39,7 @@ class WholesalerBJsonFetcher implements ProductFetcher
         );
         $baseProductUnit = new BaseProductUnit(BaseProductUnit::LITERS);
         $baseProductAmount = $this->wholesalerBJsonNormalizer->getBaseProductAmountValue($rowData['LITERS_PER_BOTTLE']);
-        $baseProductQuantity = $this->wholesalerBJsonNormalizer->getBaseProductQuantityValue('BOTTLE_AMOUNT');
+        $baseProductQuantity = $this->wholesalerBJsonNormalizer->getBaseProductQuantityValue($rowData['BOTTLE_AMOUNT']);
 
         $product = new WholesalerProduct(
             $id,
